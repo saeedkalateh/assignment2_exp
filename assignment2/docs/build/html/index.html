@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to assignment2 experimental’s documentation! &mdash; assignment2 experimental 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            assignment2 experimental
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to assignment2 experimental’s documentation!</a><ul>
+<li><a class="reference internal" href="#module-scripts.fsm">Finite State Machine</a><ul>
+<li><a class="reference internal" href="#scripts.fsm.CreateTopologicalMap"><code class="docutils literal notranslate"><span class="pre">CreateTopologicalMap</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.fsm.CreateTopologicalMap.execute"><code class="docutils literal notranslate"><span class="pre">CreateTopologicalMap.execute()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.fsm.MoveToCharger"><code class="docutils literal notranslate"><span class="pre">MoveToCharger</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.fsm.MoveToCharger.execute"><code class="docutils literal notranslate"><span class="pre">MoveToCharger.execute()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.fsm.MoveToRoom"><code class="docutils literal notranslate"><span class="pre">MoveToRoom</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.fsm.MoveToRoom.execute"><code class="docutils literal notranslate"><span class="pre">MoveToRoom.execute()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.fsm.Recharging"><code class="docutils literal notranslate"><span class="pre">Recharging</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.fsm.Recharging.execute"><code class="docutils literal notranslate"><span class="pre">Recharging.execute()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.fsm.VisitRoom"><code class="docutils literal notranslate"><span class="pre">VisitRoom</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.fsm.VisitRoom.execute"><code class="docutils literal notranslate"><span class="pre">VisitRoom.execute()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scripts.fsm.check_target_reached"><code class="docutils literal notranslate"><span class="pre">check_target_reached()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.fsm.get_room_info"><code class="docutils literal notranslate"><span class="pre">get_room_info()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.fsm.get_room_pose"><code class="docutils literal notranslate"><span class="pre">get_room_pose()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.fsm.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.fsm.marker_id_callback"><code class="docutils literal notranslate"><span class="pre">marker_id_callback()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.fsm.move_to_pose"><code class="docutils literal notranslate"><span class="pre">move_to_pose()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.fsm.set_arm_movement_state"><code class="docutils literal notranslate"><span class="pre">set_arm_movement_state()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.fsm.set_base_movement_state"><code class="docutils literal notranslate"><span class="pre">set_base_movement_state()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.fsm.set_battery_level"><code class="docutils literal notranslate"><span class="pre">set_battery_level()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-scripts.robot_state">Robot State</a><ul>
+<li><a class="reference internal" href="#scripts.robot_state.RobotState"><code class="docutils literal notranslate"><span class="pre">RobotState</span></code></a><ul>
+<li><a class="reference internal" href="#scripts.robot_state.RobotState.get_base_movement_state"><code class="docutils literal notranslate"><span class="pre">RobotState.get_base_movement_state()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.robot_state.RobotState.get_battery_level"><code class="docutils literal notranslate"><span class="pre">RobotState.get_battery_level()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.robot_state.RobotState.get_pose"><code class="docutils literal notranslate"><span class="pre">RobotState.get_pose()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.robot_state.RobotState.odom_callback"><code class="docutils literal notranslate"><span class="pre">RobotState.odom_callback()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.robot_state.RobotState.set_base_movement_state"><code class="docutils literal notranslate"><span class="pre">RobotState.set_base_movement_state()</span></code></a></li>
+<li><a class="reference internal" href="#scripts.robot_state.RobotState.set_battery_level"><code class="docutils literal notranslate"><span class="pre">RobotState.set_battery_level()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">assignment2 experimental</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Welcome to assignment2 experimental’s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="welcome-to-assignment2-experimental-s-documentation">
+<h1>Welcome to assignment2 experimental’s documentation!<a class="headerlink" href="#welcome-to-assignment2-experimental-s-documentation" title="Permalink to this heading"></a></h1>
+<section id="module-scripts.fsm">
+<span id="finite-state-machine"></span><h2>Finite State Machine<a class="headerlink" href="#module-scripts.fsm" title="Permalink to this heading"></a></h2>
+<span class="target" id="module-finite_state_machine"></span><dl>
+<dt>Subscribes to:</dt><dd><p>/image_id</p>
+</dd>
+<dt>Uses Service:</dt><dd><p>/state/set_battery_level</p>
+<p>/state/get_pose</p>
+<p>/state/set_base_movement_state</p>
+<p>/room_info</p>
+<p>/move_arm</p>
+</dd>
+<dt>Uses Action:</dt><dd><p>/move_base</p>
+</dd>
+<dt>Uses helper script:</dt><dd><p>/utilities/assignment2/helper.py</p>
+</dd>
+</dl>
+<p>Defines the states and transitions for the finite state machine of this rospackage. In the initial state
+robot builds the semantic map of environment using image id of the markers detected by robot camera. This node
+uses <code class="docutils literal notranslate"><span class="pre">helper.py</span></code> script to update the ontology while the process is running, and retreives
+the target room based on last visit times and robot battey state. In the next state it moves to the target room
+and if battery level gets lower than threshold, it goes to charger, and charges the battery.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="scripts.fsm.CreateTopologicalMap">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.fsm.</span></span><span class="sig-name descname"><span class="pre">CreateTopologicalMap</span></span><a class="reference internal" href="_modules/scripts/fsm.html#CreateTopologicalMap"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.fsm.CreateTopologicalMap" title="Permalink to this definition"></a></dt>
+<dd><p>Defines the initial state when robot creates the topological map. It enables the robot arm to start moving on the desired
+trajectories as it is defined in <code class="docutils literal notranslate"><span class="pre">my_moveit.cpp</span></code> file using <code class="docutils literal notranslate"><span class="pre">set_arm_movement_state(arm_movement_state)</span></code>
+function, and then checks if the number of detected room ids are enough, then exits from state by returning <code class="docutils literal notranslate"><span class="pre">map_created</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.fsm.CreateTopologicalMap.execute">
+<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">userdata</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/fsm.html#CreateTopologicalMap.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.fsm.CreateTopologicalMap.execute" title="Permalink to this definition"></a></dt>
+<dd><p>Implements the execution of the tasks while this state gets active.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scripts.fsm.MoveToCharger">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.fsm.</span></span><span class="sig-name descname"><span class="pre">MoveToCharger</span></span><a class="reference internal" href="_modules/scripts/fsm.html#MoveToCharger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.fsm.MoveToCharger" title="Permalink to this definition"></a></dt>
+<dd><p>Defines the state when battery level is low and moves to charger, first enables battery consumption
+using <code class="docutils literal notranslate"><span class="pre">set_base_movement_state(movement_state)</span></code> function and then moves to charger using
+<code class="docutils literal notranslate"><span class="pre">move_to_pose(pose)</span></code> function. Additionally, it updates the ontology while it moves to charger
+using <code class="docutils literal notranslate"><span class="pre">update_ontology(now)</span></code> function, until it reaches the charger.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.fsm.MoveToCharger.execute">
+<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">userdata</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/fsm.html#MoveToCharger.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.fsm.MoveToCharger.execute" title="Permalink to this definition"></a></dt>
+<dd><p>Implements the execution of the tasks while this state gets active.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scripts.fsm.MoveToRoom">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.fsm.</span></span><span class="sig-name descname"><span class="pre">MoveToRoom</span></span><a class="reference internal" href="_modules/scripts/fsm.html#MoveToRoom"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.fsm.MoveToRoom" title="Permalink to this definition"></a></dt>
+<dd><p>Defines the state when robot moves to target room found by the ontology, first enables battery consumption
+using <code class="docutils literal notranslate"><span class="pre">set_base_movement_state(base_movement_state)</span></code> function and then moves to target room using
+<code class="docutils literal notranslate"><span class="pre">move_to_pose(pose)</span></code> function. Additionally, it updates the ontology while it moves to target room
+using <code class="docutils literal notranslate"><span class="pre">update_ontology(now)</span></code> function, until it reaches the target room, then exits the state by
+returning <code class="docutils literal notranslate"><span class="pre">room_reached</span></code>. If the battery level gets lower than threshold, it returns <code class="docutils literal notranslate"><span class="pre">battery_low</span></code>
+and target room will be canceled.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.fsm.MoveToRoom.execute">
+<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">userdata</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/fsm.html#MoveToRoom.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.fsm.MoveToRoom.execute" title="Permalink to this definition"></a></dt>
+<dd><p>Implements the execution of the tasks while this state gets active.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scripts.fsm.Recharging">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.fsm.</span></span><span class="sig-name descname"><span class="pre">Recharging</span></span><a class="reference internal" href="_modules/scripts/fsm.html#Recharging"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.fsm.Recharging" title="Permalink to this definition"></a></dt>
+<dd><p>Defines the state when robot has reached the charger and chargers battery after some time using
+<code class="docutils literal notranslate"><span class="pre">set_battery_level(battery_level)</span></code> function and then returns <code class="docutils literal notranslate"><span class="pre">robot_charged</span></code> transition.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.fsm.Recharging.execute">
+<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">userdata</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/fsm.html#Recharging.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.fsm.Recharging.execute" title="Permalink to this definition"></a></dt>
+<dd><p>Implements the execution of the tasks while this state gets active.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scripts.fsm.VisitRoom">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.fsm.</span></span><span class="sig-name descname"><span class="pre">VisitRoom</span></span><a class="reference internal" href="_modules/scripts/fsm.html#VisitRoom"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.fsm.VisitRoom" title="Permalink to this definition"></a></dt>
+<dd><p>Defines the state when robot has reached the target room and then visits it. It enables robot arm movement
+like the initial state using <code class="docutils literal notranslate"><span class="pre">set_arm_movement_state(arm_movement_state)</span></code> functinon, then returns <code class="docutils literal notranslate"><span class="pre">room_visited</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.fsm.VisitRoom.execute">
+<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">userdata</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/fsm.html#VisitRoom.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.fsm.VisitRoom.execute" title="Permalink to this definition"></a></dt>
+<dd><p>Implements the execution of the tasks while this state gets active.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.fsm.check_target_reached">
+<span class="sig-prename descclassname"><span class="pre">scripts.fsm.</span></span><span class="sig-name descname"><span class="pre">check_target_reached</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_pose</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/fsm.html#check_target_reached"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.fsm.check_target_reached" title="Permalink to this definition"></a></dt>
+<dd><p>Checks if the robot has reached to a specific point by computing the eucledian distance between
+robot current pose and target pose</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>target_pose</strong> (<em>Point</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>target_reached(Bool)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.fsm.get_room_info">
+<span class="sig-prename descclassname"><span class="pre">scripts.fsm.</span></span><span class="sig-name descname"><span class="pre">get_room_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">room_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/fsm.html#get_room_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.fsm.get_room_info" title="Permalink to this definition"></a></dt>
+<dd><p>Server client for <code class="docutils literal notranslate"><span class="pre">marker_server</span></code>, gets information for each room using <code class="docutils literal notranslate"><span class="pre">room_info</span></code> service</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>room_id</strong> (<em>int</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>resp(RoomInformationResponse)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.fsm.get_room_pose">
+<span class="sig-prename descclassname"><span class="pre">scripts.fsm.</span></span><span class="sig-name descname"><span class="pre">get_room_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">room</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/fsm.html#get_room_pose"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.fsm.get_room_pose" title="Permalink to this definition"></a></dt>
+<dd><p>Detects the center postion by using the room information for corresponding room</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>room</strong> (<em>string</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>room_pose(Point)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.fsm.main">
+<span class="sig-prename descclassname"><span class="pre">scripts.fsm.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/fsm.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.fsm.main" title="Permalink to this definition"></a></dt>
+<dd><p>The main function for finite_state_machine node, initialises the node and takes an instance of
+<code class="docutils literal notranslate"><span class="pre">TopologicalMap</span></code> class in the time instance now, defines the subscriner to the <code class="docutils literal notranslate"><span class="pre">/image_id</span></code> topic
+, defines the states and transitions of the finite state machine for topological map and finally
+starts the finite state machine process</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.fsm.marker_id_callback">
+<span class="sig-prename descclassname"><span class="pre">scripts.fsm.</span></span><span class="sig-name descname"><span class="pre">marker_id_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/fsm.html#marker_id_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.fsm.marker_id_callback" title="Permalink to this definition"></a></dt>
+<dd><p>Callback function for <code class="docutils literal notranslate"><span class="pre">/image_id</span></code> topic subscriber. Eveytime an image id is detected, checks
+if image id is valuable and not already available, then saves the corresponding information of
+each room in the global variables by calling <code class="docutils literal notranslate"><span class="pre">get_room_info(room_id)</span></code> function, and modifies
+the ontology using <code class="docutils literal notranslate"><span class="pre">add_room(room)</span></code>, <code class="docutils literal notranslate"><span class="pre">add_door(door)</span></code>, <code class="docutils literal notranslate"><span class="pre">assign_doors_to_room(room,</span> <span class="pre">doors)</span></code>
+<code class="docutils literal notranslate"><span class="pre">disjoint_individuals()</span></code> and <code class="docutils literal notranslate"><span class="pre">add_last_visit_time(room,</span> <span class="pre">visit_time)</span></code> functions from
+<code class="docutils literal notranslate"><span class="pre">topological_map.py</span></code> helper script.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>int32</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.fsm.move_to_pose">
+<span class="sig-prename descclassname"><span class="pre">scripts.fsm.</span></span><span class="sig-name descname"><span class="pre">move_to_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pose</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/fsm.html#move_to_pose"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.fsm.move_to_pose" title="Permalink to this definition"></a></dt>
+<dd><p>Action client function for <code class="docutils literal notranslate"><span class="pre">move_base</span></code> node, gets a pose as an argument and sends it as
+<code class="docutils literal notranslate"><span class="pre">MoveBaseGoal.msg</span></code> to the action server</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pose</strong> (<em>Point</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>result(MoveBaseResult.msg)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.fsm.set_arm_movement_state">
+<span class="sig-prename descclassname"><span class="pre">scripts.fsm.</span></span><span class="sig-name descname"><span class="pre">set_arm_movement_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arm_movement_state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/fsm.html#set_arm_movement_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.fsm.set_arm_movement_state" title="Permalink to this definition"></a></dt>
+<dd><p>Service client function for <code class="docutils literal notranslate"><span class="pre">/move_arm</span></code>. Updates the current robot arm movement state stored
+in <code class="docutils literal notranslate"><span class="pre">my_moveit</span></code> node</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>arm_movement_state</strong> (<em>bool</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.fsm.set_base_movement_state">
+<span class="sig-prename descclassname"><span class="pre">scripts.fsm.</span></span><span class="sig-name descname"><span class="pre">set_base_movement_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_movement_state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/fsm.html#set_base_movement_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.fsm.set_base_movement_state" title="Permalink to this definition"></a></dt>
+<dd><p>Service client function for <code class="docutils literal notranslate"><span class="pre">/base_movement_state</span></code>. Updates the current robot base movement state stored
+in <code class="docutils literal notranslate"><span class="pre">robot-states</span></code> node</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>base_movement_state</strong> (<em>bool</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.fsm.set_battery_level">
+<span class="sig-prename descclassname"><span class="pre">scripts.fsm.</span></span><span class="sig-name descname"><span class="pre">set_battery_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">battery_level</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/fsm.html#set_battery_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.fsm.set_battery_level" title="Permalink to this definition"></a></dt>
+<dd><p>Service client function for <code class="docutils literal notranslate"><span class="pre">/state/set_battery_level</span></code> Update the current robot battery level
+stored in the <code class="docutils literal notranslate"><span class="pre">robot-state</span></code> node</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>battery_level</strong> (<em>int</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-scripts.robot_state">
+<span id="robot-state"></span><h2>Robot State<a class="headerlink" href="#module-scripts.robot_state" title="Permalink to this heading"></a></h2>
+<span class="target" id="module-robot_states"></span><dl>
+<dt>Subscribes to:</dt><dd><p>/odom</p>
+</dd>
+<dt>Uses Service:</dt><dd><p>/state/set_battery_level</p>
+<p>/state/get_battery_level</p>
+<p>/state/get_pose</p>
+<p>/state/set_base_movement_state</p>
+<p>/state/get_base_movement_state</p>
+</dd>
+</dl>
+<p>This node defines battery level, robot pose and robot base movement state in order to be used by other
+nodes in the software architecture.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="scripts.robot_state.RobotState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scripts.robot_state.</span></span><span class="sig-name descname"><span class="pre">RobotState</span></span><a class="reference internal" href="_modules/scripts/robot_state.html#RobotState"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.robot_state.RobotState" title="Permalink to this definition"></a></dt>
+<dd><p>Inits <code class="docutils literal notranslate"><span class="pre">robot-states</span></code> node to provide some usefull information about robot current state, such as
+pose, battery level and base movement state</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.robot_state.RobotState.get_base_movement_state">
+<span class="sig-name descname"><span class="pre">get_base_movement_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/robot_state.html#RobotState.get_base_movement_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.robot_state.RobotState.get_base_movement_state" title="Permalink to this definition"></a></dt>
+<dd><p>The <cite>state/get_base_movement_state</cite> service implementation.
+The <cite>request</cite> input parameter is given by the client as empty. Thus, it is not used.
+The <cite>response</cite> returned to the client contains the current robot base movement state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>GetBaseMovementStateRequest</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response(GetBaseMovementStateResponse)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.robot_state.RobotState.get_battery_level">
+<span class="sig-name descname"><span class="pre">get_battery_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/robot_state.html#RobotState.get_battery_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.robot_state.RobotState.get_battery_level" title="Permalink to this definition"></a></dt>
+<dd><p>The <cite>state/get_battery_level</cite> service implementation.
+The <cite>request</cite> input parameter is given by the client as empty. Thus, it is not used.
+The <cite>response</cite> returned to the client contains the current robot battery level.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>GetBatteryLevelRequest</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response(GetBatteryLevelResponse)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.robot_state.RobotState.get_pose">
+<span class="sig-name descname"><span class="pre">get_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/robot_state.html#RobotState.get_pose"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.robot_state.RobotState.get_pose" title="Permalink to this definition"></a></dt>
+<dd><p>The <cite>state/get_pose</cite> service implementation.
+The <cite>request</cite> input parameter is given by the client as empty. Thus, it is not used.
+The <cite>response</cite> returned to the client contains the current robot pose.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>GetPoseRequest</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response(GetPoseResponse)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.robot_state.RobotState.odom_callback">
+<span class="sig-name descname"><span class="pre">odom_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/robot_state.html#RobotState.odom_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.robot_state.RobotState.odom_callback" title="Permalink to this definition"></a></dt>
+<dd><p>Callback function for <code class="docutils literal notranslate"><span class="pre">/odom</span></code> topic subscriber, update robot current pose in <code class="docutils literal notranslate"><span class="pre">robot-states</span></code>
+node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>nav_msgs.msg.Odometry</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.robot_state.RobotState.set_base_movement_state">
+<span class="sig-name descname"><span class="pre">set_base_movement_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/robot_state.html#RobotState.set_base_movement_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.robot_state.RobotState.set_base_movement_state" title="Permalink to this definition"></a></dt>
+<dd><p>The <cite>state/set_base_movement_state</cite> service implementation.
+The <cite>request</cite> input parameter is the current robot base movement state to be set,
+as given by the client. This server returns an empty <cite>response</cite>.</p>
+<dl class="simple">
+<dt>Arg:</dt><dd><p>request(SetBaseMovementStateRequest)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="scripts.robot_state.RobotState.set_battery_level">
+<span class="sig-name descname"><span class="pre">set_battery_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/robot_state.html#RobotState.set_battery_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.robot_state.RobotState.set_battery_level" title="Permalink to this definition"></a></dt>
+<dd><p>The <cite>state/set_battery_level</cite> service implementation.
+The <cite>request</cite> input parameter is the current robot battery level to be set,
+as given by the client. This server returns an empty <cite>response</cite>.</p>
+<dl class="simple">
+<dt>Arg:</dt><dd><p>request(SetBatteryLevelRequest)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Saeed Kalateh.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
